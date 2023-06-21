@@ -1,0 +1,11 @@
+const fs = require('fs');
+
+const nodejsArchitecture = 'Node.js architecture information goes here';
+
+fs.writeFile('nodejs_architecture.txt', nodejsArchitecture, (err) => {
+  if (err) {
+    console.error('Error writing to file:', err);
+    return;
+  }
+  console.log('Node.js architecture information added to nodejs_architecture.txt');
+});
