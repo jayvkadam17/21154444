@@ -1,0 +1,18 @@
+const advantagesOfNodeJS = 'Advantages of Node.js go here';
+
+fs.appendFile('nodejs_architecture.txt', `\n\n${advantagesOfNodeJS}`, (err) => {
+  if (err) {
+    console.error('Error appending to file:', err);
+    return;
+  }
+  console.log('Advantages of Node.js appended to nodejs_architecture.txt');
+
+  // Read the updated file content and print it
+  fs.readFile('nodejs_architecture.txt', 'utf8', (err, data) => {
+    if (err) {
+      console.error('Error reading file:', err);
+      return;
+    }
+    console.log('Updated content of nodejs_architecture.txt:', data);
+  });
+});
